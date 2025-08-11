@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_sales_reasons
+    description: Sales reason reference.
+    columns:
+      - name: sales_reason_id
+        description: Unique sales reason identifier.
+        tests:
+          - unique
+          - not_null
+      - name: sales_reason
+        description: Sales reason description.
+
+

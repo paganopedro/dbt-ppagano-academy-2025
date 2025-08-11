@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_sales_order_headers
+    description: General sales order data.
+    columns:
+      - name: sales_order_id
+        description: Unique sales order identifier.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Customer identification number. Foreign key to customers table.
+      - name: credit_card_id
+        description: Credit card identification number. Foreign key to credit cards table.
+      - name: ship_to_address_id
+        description: Customer shipping address. Foreign key to addresses table.
+      - name: order_status
+        description: Current order status.
+      - name: order_date
+        description: Current order status.
+      - name: order_subtotal
+        description: Order subtotal amount.
+
+

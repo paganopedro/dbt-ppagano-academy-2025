@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_state_provinces
+    description: State/province reference.
+    columns:
+      - name: state_province_id
+        description: Unique state/province identifier.
+        tests:
+          - unique
+          - not_null
+      - name: country_region_code
+        description: ISO country/region code; references country regions.
+        tests:
+          - not_null
+      - name: state_province_name
+        description: State/province name.
+        tests:
+          - not_null
+
+

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_sales_order_header_sales_reasons
+    description: Bridge mapping sales orders to sales reasons.
+    columns:
+      - name: sales_order_id
+        description: Primary key. Foreign key to sales order headers table.
+        tests:
+          - not_null
+      - name: sales_reason_id
+        description: Foreign key to sales reasons table.
+
+
