@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_people
+    description: People entities (employees, customers, vendor contacts).
+    columns:
+      - name: person_id
+        description: Unique person identifier.
+        tests:
+          - unique
+          - not_null
+      - name: person_type_id
+        description: Primary type of person. SC = Store Contact, IN = Individual (retail) Customer, SP = Sales Person, EM = Employee (non-sales), VC = Vendor Contact, GC = General Contact.
+        tests:
+          - not_null
+      - name: full_name
+        description: Person full name.
+
+

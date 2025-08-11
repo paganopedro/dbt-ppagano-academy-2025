@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_credit_cards
+    description: Standardized credit card records.
+    columns:
+      - name: credit_card_id
+        description: Unique credit card identifier.
+        tests:
+          - unique
+          - not_null
+      - name: card_type
+        description: Card brand/type.
+        tests:
+          - not_null
+
+

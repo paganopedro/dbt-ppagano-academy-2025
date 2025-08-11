@@ -1,0 +1,129 @@
+version: 2
+
+sources:
+  - name: RAW_ADVENTURE_WORKS
+    description: Raw AdventureWorks source tables.
+    schema: RAW_ADVENTURE_WORKS
+    tables:
+      - name: person_address
+        description: Address records for customers, employees, and vendors.
+        columns:
+          - name: addressid
+            description: Primary key for addresses (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: person_countryregion
+        description: ISO country/region code reference.
+        columns:
+          - name: countryregioncode
+            description: Primary key: ISO country/region code.
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_creditcard
+        description: Credit card reference data.
+        columns:
+          - name: creditcardid
+            description: Primary key for credit cards (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_customer
+        description: Current customer records.
+        columns:
+          - name: customerid
+            description: Primary customer key (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_personcreditcard
+        description: People entities related to AdventureWorks (employees, customers, vendor contacts).
+        columns:
+          - name: businessentityid
+            description: Primary key for person records.
+            tests:
+              - unique
+              - not_null
+
+      - name: production_product
+        description: Products sold and components used in manufacturing.
+        columns:
+          - name: productid
+            description: Primary product key (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: production_productcategory
+        description: Top-level product category reference.
+        columns:
+          - name: productcategoryid
+            description: Primary key for product categories (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: production_productsubcategory
+        description: Subcategories of products.
+        columns:
+          - name: productcategoryid
+            description: Identifier for the product subcategory (auto-increment).
+            tests:
+              - not_null
+
+      - name: sales_salesorderdetail
+        description: Line items for each sales order.
+        columns:
+          - name: salesorderdetailid
+            description: Primary key. One incremental unique number per product sold.
+            tests:
+              - not_null
+
+      - name: sales_salesorderheader
+        description: Sales order data.
+        columns:
+          - name: salesorderid
+            description: Primary sales order key (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_salesorderheadersalesreason
+        description: Bridge table linking sales orders to sales reasons.
+        columns:
+          - name: salesorderid
+            description: Foreign key to salesorderheader; Primary key.
+            tests:
+              - not_null
+
+      - name: sales_salesreason
+        description: Reference list of sales reasons.
+        columns:
+          - name: salesreasonid
+            description: Primary key for sales reasons (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: person_stateprovince
+        description: State and province reference.
+        columns:
+          - name: stateprovinceid
+            description: Primary key for states/provinces (auto-increment).
+            tests:
+              - unique
+              - not_null
+
+      - name: sales_store
+        description: Reseller stores (customers) in AdventureWorks.
+        columns:
+          - name: businessentityid
+            description: Primary key, also a foreign key to customer.
+            tests:
+              - unique
+              - not_null

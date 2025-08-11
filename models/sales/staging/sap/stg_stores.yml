@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_stores
+    description: Reseller stores (customers).
+    columns:
+      - name: store_id
+        description: Store identifier (also key in customer).
+        tests:
+          - unique
+          - not_null
+      - name: store_name
+        description: Store name.
+        tests:
+          - not_null
+
+

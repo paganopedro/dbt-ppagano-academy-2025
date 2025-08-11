@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: Products sold and manufactured components.
+    columns:
+      - name: product_id
+        description: Unique product identifier.
+        tests:
+          - unique
+          - not_null
+      - name: product_subcategory_id
+        description: Product is a member of this product subcategory. Foreign key to product subcategories table.
+      - name: product_name
+        description: Product name.
+        tests:
+          - not_null
+
+

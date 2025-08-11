@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Current customer data.
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+        tests:
+          - unique
+          - not_null
+      - name: person_id
+        description: Foreign key to people table.
+        tests:
+          - unique
+      - name: store_id
+        description: Foreign key to stores table.
+
+

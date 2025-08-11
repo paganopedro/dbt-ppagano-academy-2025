@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_product_subcategories
+    description: Product subcategory reference.
+    columns:
+      - name: product_subcategory_id
+        description: Unique product subcategory identifier.
+        tests:
+          - not_null
+      - name: product_category_id
+        description: Product category identification number. Foreign key to product_categories table.
+        tests:
+          - not_null
+      - name: product_subcategory_name
+        description: Subcategory description.
+        tests:
+          - not_null
+
+
