@@ -5,7 +5,7 @@ models:
     description: Order status reference.
     columns:
       - name: status_id
-        description: Order status code: 1 In process, 2 Approved, 3 Backordered, 4 Rejected, 5 Shipped, 6 Cancelled.
+        description: "Order status code: 1 In process, 2 Approved, 3 Backordered, 4 Rejected, 5 Shipped, 6 Cancelled."
         tests:
           - unique
           - not_null
