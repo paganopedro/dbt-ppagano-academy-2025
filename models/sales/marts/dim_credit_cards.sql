@@ -12,4 +12,4 @@ enriched_credit_cards as (
 )
 
 select *
-from enriched_credit_cards;
+from enriched_credit_cards

@@ -12,4 +12,4 @@ enriched_sales_reasons as (
 )
 
 select *
-from enriched_sales_reasons;
+from enriched_sales_reasons

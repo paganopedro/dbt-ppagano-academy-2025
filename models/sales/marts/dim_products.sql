@@ -12,4 +12,4 @@ enriched_products as (
 )
 
 select *
-from enriched_products;
+from enriched_products

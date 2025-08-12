@@ -21,4 +21,4 @@ enriched_orders as (
 )
 
 select *
-from enriched_orders;
+from enriched_orders

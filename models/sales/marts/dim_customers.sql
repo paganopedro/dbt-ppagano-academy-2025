@@ -13,4 +13,4 @@ enriched_customers as (
 )
 
 select *
-from enriched_customers;
+from enriched_customers

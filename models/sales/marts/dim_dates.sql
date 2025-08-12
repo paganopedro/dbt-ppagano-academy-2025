@@ -12,4 +12,4 @@ enriched_dates as (
 )
 
 select *
-from enriched_dates;
+from enriched_dates

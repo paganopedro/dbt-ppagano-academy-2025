@@ -11,4 +11,4 @@ enriched_addresses as (
 )
 
 select *
-from enriched_addresses;
+from enriched_addresses

@@ -12,4 +12,4 @@ enriched_status as (
 )
 
 select *
-from enriched_status;
+from enriched_status
