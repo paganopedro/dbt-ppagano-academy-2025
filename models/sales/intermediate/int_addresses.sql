@@ -5,12 +5,12 @@ with src_addresses as (
 
 src_country_regions as (
     select *
-    from {{ ref('stg_state_provinces') }}
+    from {{ ref('stg_country_regions') }}
 ),
 
 src_state_provinces as (
     select *
-    from {{ ref('stg_country_regions') }}
+    from {{ ref('stg_state_provinces') }}
 ),
 
 assembled_addresses as (
