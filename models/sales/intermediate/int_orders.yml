@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: int_orders
+    description: Intermediate model with sales order data.
+    columns:
+      - name: sales_order_id
+        description: Primary sales key.
+        tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        description: One incremental unique number per product sold. Foreign key to sales order details table.
+        tests:
+          - not_null
+
+      - name: product_id
+        description: Product sold to customer. Foreign key to products table.
+
+      - name: customer_id
+        description: Customer identification number. Foreign key to customers table;
+
+      - name: creditcard_id
+        description: Credit card identification number. Foreign key to credit cards table.
+
+      - name: ship_to_address_id
+        description: Customer shipping address. Foreign key to addresses table.
+
+      - name: status_id
+        description: Order current status.
+
+      - name: order_date
+        description: Date the sales order was created.
+
+      - name: order_quantity
+        description: Quantity ordered per product.
+        tests:
+          - not_null
+
+      - name: unit_price
+        description: Selling price of a single product.
+        tests:
+          - not_null
+
+      - name: unit_price_discount
+        description: Discount amount.
+        
+      - name: order_subtotal
+        description: Sales subtotal.
+
+      - name: gross_sales
+        description: Gross sales represents the total revenue generated from sales by multiplying the unit price and order quantity.
+
+      - name: net_sales
+        description: Net sales is calculated by multiplying the unit price and order quantity and subtracting the discount amount.

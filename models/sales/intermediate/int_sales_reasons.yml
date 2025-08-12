@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_sales_reasons
+    description: Intermediate table with customer orders reasons.
+    columns:
+      - name: sales_order_id
+        description: Primary key for sales order header sales reasons table.
+        tests:
+          - not_null
+
+      - name: sales_reason_id
+        description: Foreign key to sales reasons table.
+        tests:
+          - not_null
+
+      - name: sales_reason
+        description: Sales reason description.

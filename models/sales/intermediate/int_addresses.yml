@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_addresses
+    description: Intermediate model with address data for customers, employees, and vendors.
+    columns:
+      - name: address_id
+        description: Primary key for address records.
+        tests:
+          - unique
+          - not_null
+
+      - name: country_region_code
+        description: ISO standard code for countries and regions. Foreign key to country regions table.
+        tests:
+          - not_null
+          
+      - name: state_province_id
+        description: Identification number for the state or province. Foreign key to state provinces table.
+        tests:
+          - not_null
+
+      - name: city_name
+        description: Name of the city.
+
+      - name: country_region_name
+        description: Country or region name.
+
+      - name: state_province_name
+        description: State or province name.

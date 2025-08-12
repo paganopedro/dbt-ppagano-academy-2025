@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_customers
+    description: Intermediate table with current customer data.
+    columns:
+      - name: customer_id
+        description: Primary key for customer records.
+        tests:
+          - unique
+          - not_null
+
+      - name: person_id
+        description: Foreign key to people table.
+
+      - name: store_id
+        description: Foreign key to stores table.
+
+      - name: person_type
+        description: Primary type of person.
+
+      - name: full_name
+        description: Full name of the person.
+
+      - name: store_name
+        description: Name of the store.

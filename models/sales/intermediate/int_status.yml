@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_status
+    description: Intermediate table with order status.
+    columns:
+      - name: status_id
+        description: Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+        tests:
+          - unique
+          - not_null
+
+      - name: order_status
+        description: Order current status.
+        tests:
+        - not_null

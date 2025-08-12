@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_products
+    description: Intermediate model with products sold or used in the manufacturing of sold products.
+    columns:
+      - name: product_id
+        description: Primary key for product records.
+        tests:
+          - unique
+          - not_null
+
+      - name: product_category_id
+        description: Product is a member of this product subcategory. Foreign key to product categories table.
+
+      - name: product_subcategory_id
+        description: Product is a member of this product subcategory. Foreign key to product subcategories table.
+
+      - name: product_name
+        description: Name of the product.
+        tests:
+          - not_null
+
+      - name: product_category_name
+        description: Category description.
+
+      - name: product_subcategory_name
+        description: Subcategory description.

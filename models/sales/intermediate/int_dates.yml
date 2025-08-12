@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int_dates
+    description: Intermediate table with dates.
+    columns:
+      - name: order_date
+        description: Purchase order creation date.
+        tests:
+        - not_null
+
+      - name: order_year
+        description: Purchase order creation year.
+        tests:
+        - not_null
+
+      - name: order_month
+        description: Purchase order creation month.
+        tests:
+        - not_null
+
+      - name: order_day
+        description: Purchase order creation day.
+        tests:
+        - not_null
