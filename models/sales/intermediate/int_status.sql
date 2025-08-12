@@ -19,4 +19,4 @@ status_mapped as (
 )
 
 select *
-from status_mapped;
+from status_mapped

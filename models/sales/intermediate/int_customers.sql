@@ -36,4 +36,4 @@ assembled_customers as (
 )
 
 select *
-from assembled_customers;
+from assembled_customers

@@ -29,4 +29,4 @@ assembled_products as (
 )
 
 select *
-from assembled_products;
+from assembled_products

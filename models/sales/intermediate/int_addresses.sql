@@ -30,4 +30,4 @@ assembled_addresses as (
 )
 
 select *
-from assembled_addresses;
+from assembled_addresses

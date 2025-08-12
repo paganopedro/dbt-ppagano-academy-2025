@@ -30,4 +30,4 @@ assembled_orders as (
 )
 
 select *
-from assembled_orders;
+from assembled_orders

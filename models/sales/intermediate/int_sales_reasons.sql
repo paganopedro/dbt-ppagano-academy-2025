@@ -19,4 +19,4 @@ assembled_reasons as (
 )
 
 select *
-from assembled_reasons;
+from assembled_reasons

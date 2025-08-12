@@ -26,4 +26,4 @@ derived_calendar as (
 )
 
 select *
-from derived_calendar;
+from derived_calendar
