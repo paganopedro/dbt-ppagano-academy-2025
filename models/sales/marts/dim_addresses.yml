@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_addresses
+    description: "Reference dimension table containing geographic address information for various business entities"
+    columns:
+      - name: address_sk
+        description: "Unique surrogate key identifier for address records"
+        tests:
+          - unique
+          - not_null
+
+      - name: address_id
+        description: "Original business identifier for address records"
+        tests:
+          - unique
+          - not_null
+
+      - name: country_region_code
+        description: "Standardized international country and region identifier code"
+        tests:
+          - not_null
+          
+      - name: stateprovince_id
+        description: "Business identifier for state or province location"
+        tests:
+          - not_null
+
+      - name: city_name
+        description: "Municipality or urban area designation"
+
+      - name: country_region_name
+        description: "Full descriptive name of country or region"
+
+      - name: state_province_name
+        description: "Full descriptive name of state or province"

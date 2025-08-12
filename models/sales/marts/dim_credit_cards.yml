@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_credit_cards
+    description: "Reference dimension table containing customer payment method and credit card information"
+    columns:
+      - name: credit_card_sk
+        description: "Unique surrogate key identifier for credit card records"
+        tests:
+          - unique
+          - not_null
+
+      - name: credit_card_id
+        description: "Original business identifier for credit card records"
+        tests:
+          - unique
+          - not_null
+
+      - name: card_type
+        description: "Classification of credit card payment method type"
+        tests:
+          - not_null

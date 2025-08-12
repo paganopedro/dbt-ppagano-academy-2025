@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_sales_reasons
+    description: "Reference dimension table containing customer order motivation and reason classifications"
+    columns:
+      - name: sales_reason_sk
+        description: "Unique surrogate key identifier for sales reason records"
+        tests:
+          - not_null
+
+      - name: sales_order_id
+        description: "Business identifier linking to sales order records"
+        tests:
+          - not_null
+
+      - name: sales_reason_id
+        description: "Business identifier linking to sales reason classification"
+        tests:
+          - not_null
+
+      - name: sales_reason
+        description: "Descriptive explanation of the sales order motivation"

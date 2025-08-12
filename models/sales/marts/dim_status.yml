@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_status
+    description: "Reference dimension table containing order lifecycle and status classifications"
+    columns:
+      - name: status_sk
+        description: "Unique surrogate key identifier for order status records"
+        tests:
+          - unique
+          - not_null
+
+      - name: status_id
+        description: "Business identifier for order status classification"
+        tests:
+          - unique
+          - not_null
+
+      - name: order_status
+        description: "Current operational status of the sales order"
+        tests:
+          - not_null
