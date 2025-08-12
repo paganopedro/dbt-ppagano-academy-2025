@@ -41,7 +41,7 @@ sources:
               - unique
               - not_null
 
-      - name: sales_personcreditcard
+      - name: person_person
         description: People entities related to AdventureWorks (employees, customers, vendor contacts).
         columns:
           - name: businessentityid

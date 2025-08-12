@@ -1,6 +1,6 @@
 with source as (
     select *
-    from {{ source('RAW_ADVENTURE_WORKS', 'sales_personcreditcard') }}
+    from {{ source('RAW_ADVENTURE_WORKS', 'person_person') }}
 ),
 
 people as (
