@@ -19,7 +19,7 @@ models:
         tests:
           - not_null
           
-      - name: stateprovince_id
+      - name: state_province_id
         description: "Business identifier for state or province location"
         tests:
           - not_null
