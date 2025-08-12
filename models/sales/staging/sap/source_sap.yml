@@ -18,7 +18,7 @@ sources:
         description: ISO country/region code reference.
         columns:
           - name: countryregioncode
-            description: Primary key: ISO country/region code.
+            description: "Primary key: ISO country/region code."
             tests:
               - unique
               - not_null
