@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Central fact table containing comprehensive sales order transaction data and metrics"
+    columns:
+      - name: sales_order_sk
+        description: "Unique surrogate key identifier for sales order records"
+        tests:
+          - unique
+          - not_null
+
+      - name: product_sk
+        description: "Surrogate key reference linking to product dimension table"
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk
+
+      - name: customer_sk
+        description: "Surrogate key reference linking to customer dimension table"
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
+
+      - name: credit_card_sk
+        description: "Surrogate key reference linking to credit card dimension table"
+
+      - name: ship_address_sk
+        description: "Surrogate key reference linking to address dimension table"
+        tests:
+          - relationships:
+              to: ref('dim_addresses')
+              field: address_sk
+
+      - name: status_sk
+        description: "Surrogate key reference linking to order status dimension table"
+        tests:
+          - relationships:
+              to: ref('dim_status')
+              field: status_sk
+
+      - name: order_date_sk
+        description: "Surrogate key reference linking to date dimension table"
+
+      - name: sales_order_id
+        description: "Original business identifier for sales order records"
+        tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        description: "Sequential identifier for individual product line items within orders"
+
+      - name: credit_card_id
+        description: "Business identifier for credit card payment method"
+
+      - name: customer_id
+        description: "Business identifier for customer account"
+
+      - name: ship_to_address_id
+        description: "Business identifier for customer delivery address"
+
+      - name: product_id
+        description: "Business identifier for product catalog items"
+
+      - name: status_id
+        description: "Current operational status of the sales order"
+
+      - name: order_date
+        description: "Timestamp when the sales order was initially created"
+
+      - name: order_quantity
+        description: "Number of units requested for this product line item"
+
+      - name: unit_price
+        description: "Individual product price at time of order"
+
+      - name: unit_price_discount
+        description: "Per-unit discount amount applied to this line item"
+
+      - name: order_subtotal
+        description: "Pre-discounts total for this specific order line item"
+
+      - name: gross_sales
+        description: "Total revenue calculation before discounts"
+
+      - name: net_sales
+        description: "Final revenue amount after applying all discounts"
