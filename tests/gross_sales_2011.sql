@@ -4,7 +4,7 @@
 
 with yearly_sales as (
     select
-        cast(sum(gross_sales) as float64) as total_sales
+        cast(sum(gross_sales) as FLOAT) as total_sales
     from {{ ref('fct_orders') }}
     where extract(year from order_date) = 2011
 )
