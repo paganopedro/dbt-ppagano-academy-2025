@@ -2,17 +2,17 @@ version: 2
 
 models:
   - name: int_sales_reasons
-    description: Intermediate table with customer orders reasons.
+    description: "Intermediate transformation model containing processed customer order motivation and reason classifications"
     columns:
       - name: sales_order_id
-        description: Primary key for sales order header sales reasons table.
+        description: "Primary business identifier for sales order header sales reasons"
         tests:
           - not_null
 
       - name: sales_reason_id
-        description: Foreign key to sales reasons table.
+        description: "Business identifier linking to sales reason classification"
         tests:
           - not_null
 
       - name: sales_reason
-        description: Sales reason description.
+        description: "Descriptive explanation of the sales order motivation"

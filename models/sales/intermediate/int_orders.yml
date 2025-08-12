@@ -2,54 +2,54 @@ version: 2
 
 models:
   - name: int_orders
-    description: Intermediate model with sales order data.
+    description: "Intermediate transformation model containing processed sales order transaction data"
     columns:
       - name: sales_order_id
-        description: Primary sales key.
+        description: "Primary business identifier for sales order records"
         tests:
           - not_null
 
       - name: sales_order_detail_id
-        description: One incremental unique number per product sold. Foreign key to sales order details table.
+        description: "Sequential identifier for individual product line items within orders"
         tests:
           - not_null
 
       - name: product_id
-        description: Product sold to customer. Foreign key to products table.
+        description: "Business identifier linking to product catalog items"
 
       - name: customer_id
-        description: Customer identification number. Foreign key to customers table;
+        description: "Business identifier linking to customer account records"
 
       - name: creditcard_id
-        description: Credit card identification number. Foreign key to credit cards table.
+        description: "Business identifier linking to credit card payment methods"
 
       - name: ship_to_address_id
-        description: Customer shipping address. Foreign key to addresses table.
+        description: "Business identifier linking to customer delivery addresses"
 
       - name: status_id
         description: Order current status.
 
       - name: order_date
-        description: Date the sales order was created.
+        description: "Timestamp when the sales order was initially created"
 
       - name: order_quantity
-        description: Quantity ordered per product.
+        description: "Number of units requested for this product line item"
         tests:
           - not_null
 
       - name: unit_price
-        description: Selling price of a single product.
+        description: "Individual product price at time of order"
         tests:
           - not_null
 
       - name: unit_price_discount
-        description: Discount amount.
+        description: "Per-unit discount amount applied to this line item"
         
       - name: order_subtotal
         description: Sales subtotal.
 
       - name: gross_sales
-        description: Gross sales represents the total revenue generated from sales by multiplying the unit price and order quantity.
+        description: "Total revenue calculation before discounts and taxes"
 
       - name: net_sales
-        description: Net sales is calculated by multiplying the unit price and order quantity and subtracting the discount amount.
+        description: "Final revenue amount after applying all discounts"

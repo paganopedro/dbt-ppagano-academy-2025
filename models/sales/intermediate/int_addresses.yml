@@ -2,29 +2,29 @@ version: 2
 
 models:
   - name: int_addresses
-    description: Intermediate model with address data for customers, employees, and vendors.
+    description: "Intermediate transformation model containing processed address data for various business entities"
     columns:
       - name: address_id
-        description: Primary key for address records.
+        description: "Primary business identifier for address records"
         tests:
           - unique
           - not_null
 
       - name: country_region_code
-        description: ISO standard code for countries and regions. Foreign key to country regions table.
+        description: "Standardized international country and region identifier code"
         tests:
           - not_null
           
       - name: state_province_id
-        description: Identification number for the state or province. Foreign key to state provinces table.
+        description: "Business identifier for state or province location"
         tests:
           - not_null
 
       - name: city_name
-        description: Name of the city.
+        description: "Municipality or urban area designation"
 
       - name: country_region_name
-        description: Country or region name.
+        description: "Full descriptive name of country or region"
 
       - name: state_province_name
-        description: State or province name.
+        description: "Full descriptive name of state or province"
