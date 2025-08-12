@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: int_customers
     description: "Intermediate transformation model containing processed customer profile and relationship information"

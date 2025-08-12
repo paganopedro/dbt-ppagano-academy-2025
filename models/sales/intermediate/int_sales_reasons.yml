@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: int_sales_reasons
     description: "Intermediate transformation model containing processed customer order motivation and reason classifications"

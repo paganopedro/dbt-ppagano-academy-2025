@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_addresses
     description: "Reference dimension table containing geographic address information for various business entities"

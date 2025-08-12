@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_status
     description: "Reference dimension table containing order lifecycle and status classifications"

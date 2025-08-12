@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_sales_reasons
     description: "Reference dimension table containing customer order motivation and reason classifications"

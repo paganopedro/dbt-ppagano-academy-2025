@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: int_addresses
     description: "Intermediate transformation model containing processed address data for various business entities"

@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: int_products
     description: "Intermediate transformation model containing processed product catalog information and hierarchical classifications"

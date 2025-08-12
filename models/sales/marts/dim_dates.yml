@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_dates
     description: "Reference dimension table containing date components and temporal attributes for business analysis"

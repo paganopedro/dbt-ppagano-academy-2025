@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: int_dates
     description: "Intermediate transformation model containing processed date components and temporal attributes"

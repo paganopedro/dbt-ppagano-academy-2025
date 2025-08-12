@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_products
     description: "Reference dimension table containing product catalog information"

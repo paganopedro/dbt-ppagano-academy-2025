@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_customers
     description: "Reference dimension table containing comprehensive customer profile and relationship information"

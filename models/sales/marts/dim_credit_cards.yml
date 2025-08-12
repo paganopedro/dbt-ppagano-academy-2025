@@ -1,5 +1,3 @@
-version: 2
-
 models:
   - name: dim_credit_cards
     description: "Reference dimension table containing customer payment method and credit card information"
