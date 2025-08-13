@@ -1,0 +1,16 @@
+models:
+  - name: int_sales_reasons
+    description: "Intermediate transformation model containing processed customer order motivation and reason classifications"
+    columns:
+      - name: sales_order_id
+        description: "Primary business identifier for sales order header sales reasons"
+        tests:
+          - not_null
+
+      - name: sales_reason_id
+        description: "Business identifier linking to sales reason classification"
+        tests:
+          - not_null
+
+      - name: sales_reason
+        description: "Descriptive explanation of the sales order motivation"

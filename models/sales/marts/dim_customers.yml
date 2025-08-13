@@ -1,0 +1,30 @@
+models:
+  - name: dim_customers
+    description: "Reference dimension table containing comprehensive customer profile and relationship information"
+    columns:
+      - name: customer_sk
+        description: "Unique surrogate key identifier for customer records"
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Original business identifier for customer records"
+        tests:
+          - unique
+          - not_null
+
+      - name: person_id
+        description: "Business identifier linking to individual person records"
+
+      - name: store_id
+        description: "Business identifier linking to retail store locations"
+
+      - name: person_type
+        description: "Classification of person entity type"
+
+      - name: full_name
+        description: "Complete name of the individual customer"
+
+      - name: store_name
+        description: "Official business name of the retail store"

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_country_regions
+    description: ISO country/region reference.
+    columns:
+      - name: country_region_code
+        description: ISO country/region code (natural key).
+        tests:
+          - unique
+          - not_null
+      - name: country_region_name
+        description: Country/region name.
+
+

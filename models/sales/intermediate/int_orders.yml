@@ -1,0 +1,53 @@
+models:
+  - name: int_orders
+    description: "Intermediate transformation model containing processed sales order transaction data"
+    columns:
+      - name: sales_order_id
+        description: "Primary business identifier for sales order records"
+        tests:
+          - not_null
+
+      - name: sales_order_detail_id
+        description: "Sequential identifier for individual product line items within orders"
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Business identifier linking to product catalog items"
+
+      - name: customer_id
+        description: "Business identifier linking to customer account records"
+
+      - name: creditcard_id
+        description: "Business identifier linking to credit card payment methods"
+
+      - name: ship_to_address_id
+        description: "Business identifier linking to customer delivery addresses"
+
+      - name: status_id
+        description: Order current status.
+
+      - name: order_date
+        description: "Timestamp when the sales order was initially created"
+
+      - name: order_quantity
+        description: "Number of units requested for this product line item"
+        tests:
+          - not_null
+
+      - name: unit_price
+        description: "Individual product price at time of order"
+        tests:
+          - not_null
+
+      - name: unit_price_discount
+        description: "Per-unit discount amount applied to this line item"
+        
+      - name: order_subtotal
+        description: Sales subtotal.
+
+      - name: gross_sales
+        description: "Total revenue calculation before discounts and taxes"
+
+      - name: net_sales
+        description: "Final revenue amount after applying all discounts"

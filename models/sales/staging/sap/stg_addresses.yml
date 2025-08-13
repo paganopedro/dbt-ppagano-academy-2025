@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Standardized address records for customers, employees, and vendors.
+    columns:
+      - name: address_id
+        description: Unique address identifier.
+        tests:
+          - unique
+          - not_null
+      - name: state_province_id
+        description: Identifier of the state/province; references state/provinces.
+        tests:
+          - not_null
+      - name: city_name
+        description: City name.
+
+

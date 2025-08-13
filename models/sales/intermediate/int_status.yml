@@ -1,0 +1,14 @@
+models:
+  - name: int_status
+    description: "Intermediate transformation model containing processed order lifecycle and status classifications"
+    columns:
+      - name: status_id
+        description: "Business identifier for order status with specific values: 1=In process, 2=Approved, 3=Backordered, 4=Rejected, 5=Shipped, 6=Cancelled"
+        tests:
+          - unique
+          - not_null
+
+      - name: order_status
+        description: "Current operational status of the sales order"
+        tests:
+          - not_null

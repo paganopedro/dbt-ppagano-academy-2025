@@ -1,0 +1,23 @@
+models:
+  - name: int_dates
+    description: "Intermediate transformation model containing processed date components and temporal attributes"
+    columns:
+      - name: order_date
+        description: "Full date when the purchase order was created"
+        tests:
+          - not_null
+
+      - name: order_year
+        description: "Calendar year when the purchase order was created"
+        tests:
+          - not_null
+
+      - name: order_month
+        description: "Calendar month when the purchase order was created"
+        tests:
+          - not_null
+
+      - name: order_day
+        description: "Calendar day when the purchase order was created"
+        tests:
+          - not_null
