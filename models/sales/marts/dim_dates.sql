@@ -5,8 +5,8 @@ with src_dates as (
 
 enriched_dates as (
     select
-        -- Generate surrogate key for dimension table
-        {{ dbt_utils.generate_surrogate_key(['src_dates.order_day']) }} as date_sk,
+        -- Generate surrogate key for dimension table using the full order_date
+        {{ dbt_utils.generate_surrogate_key(['src_dates.order_date']) }} as date_sk,
         *
     from src_dates
 )

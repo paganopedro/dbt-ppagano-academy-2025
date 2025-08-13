@@ -2,7 +2,7 @@ models:
   - name: fct_orders
     description: "Central fact table containing comprehensive sales order transaction data and metrics"
     columns:
-      - name: sales_order_sk
+      - name: sales_reason_sk
         description: "Unique surrogate key identifier for sales order records"
         tests:
           - unique
@@ -25,7 +25,7 @@ models:
       - name: credit_card_sk
         description: "Surrogate key reference linking to credit card dimension table"
 
-      - name: ship_address_sk
+      - name: address_sk
         description: "Surrogate key reference linking to address dimension table"
         tests:
           - relationships:
@@ -39,8 +39,12 @@ models:
               to: ref('dim_status')
               field: status_sk
 
-      - name: order_date_sk
+      - name: date_sk
         description: "Surrogate key reference linking to date dimension table"
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: date_sk
 
       - name: sales_order_id
         description: "Original business identifier for sales order records"
