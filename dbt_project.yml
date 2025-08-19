@@ -23,10 +23,10 @@ models:
   adventureworks:
     sales:
       source: &source
-        +materialized: table
+        +materialized: ephemeral
       staging: &staging
         +materialized: table
       intermediate: &intermediate
-        +materialized: table
+        +materialized: ephemeral
       marts: &marts
         +materialized: table
